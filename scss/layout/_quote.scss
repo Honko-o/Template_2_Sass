@@ -1,0 +1,53 @@
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+.quote {
+    @include section-padding;
+    position: relative;
+    background-image: url(/Template_2/imgs/quote.jpg);
+    background-size: cover;
+    &::before {
+        content: '';
+        @include overlay;
+    }
+    .container {
+        position: relative;
+        color: white;
+        text-align: center;
+        q {
+            display: block;
+            font-weight: 600;
+            font-size: 33px;
+            text-align: center;
+            margin-bottom: 20px;
+            line-height: $main-line-height;
+            &::before {
+                content: '\f10e';
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                font-size: 17px;
+                position: relative;
+                top: -17px;
+                left: -5px;
+            }
+            &::after {
+                content: '\f10e';
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                font-size: 17px;
+                position: relative;
+                top: -17px;
+                right: -5px;
+            }
+        }
+        > span {
+            text-align: center;
+            font-size: 17px;
+            font-weight: 600;
+        }
+    }
+}

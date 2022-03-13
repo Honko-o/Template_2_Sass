@@ -1,0 +1,55 @@
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+.stats {
+    @include section-padding;
+    background-image: url(/Template_2/imgs/stats.jpg);
+    background-size: cover;
+    position: relative;
+    &::before {
+        content: '';
+        @include overlay;
+    }
+    .container {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        background: $transparent-main-color;
+        text-align: center;
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
+    }
+    .box {
+        flex-basis: 25%;
+        padding: 50px;
+        @media (max-width: 767px) {
+            flex-basis: 100%;
+        }
+        @media (max-width: 991px) {
+            flex-basis: 50%;
+        }
+        i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            color: white;
+            background-color: $third-color;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+        }
+        .number {
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 20px;
+        }
+        p {
+            color: white;
+            font-weight: 300;
+            font-size: 14px;
+        }
+    }
+}

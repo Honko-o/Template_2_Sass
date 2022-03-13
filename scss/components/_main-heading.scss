@@ -1,0 +1,45 @@
+@use "../util/variables" as *;
+
+.main-heading {
+    text-align: center;
+    h2 {
+        position: relative;
+        font-size: 40px;
+        font-weight: normal;
+        text-transform: uppercase;
+        color: $third-color;
+        margin-bottom: 60px;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 1px;
+            background: $third-color;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -25px;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: white;
+            border: 1px solid black;
+            border-radius: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -32px;
+        }
+    }
+    p {
+        color: $secondary-color;
+        font-weight: 300;
+        font-size: 17px;
+        width: 500px;
+        max-width: 100%;
+        line-height: $main-line-height;
+        margin: auto;
+        margin-bottom: 100px;
+    }
+}

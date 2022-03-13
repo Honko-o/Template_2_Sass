@@ -1,0 +1,18 @@
+@use './scss/base/reset';
+@use './scss/components/main-heading';
+
+// Layout
+@use './scss/layout/header';
+@use './scss/layout/landing';
+@use './scss/layout/services';
+@use './scss/layout/design';
+@use './scss/layout/portfolio';
+@use './scss/layout/video';
+@use './scss/layout/about';
+@use './scss/layout/stats';
+@use './scss/layout/testi_skills';
+@use './scss/layout/quote';
+@use './scss/layout/pricing';
+@use './scss/layout/subscribe';
+@use './scss/layout/contact';
+@use './scss/layout/footer';

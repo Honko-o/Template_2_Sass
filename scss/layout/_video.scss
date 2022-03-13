@@ -1,0 +1,44 @@
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+.video {
+    @include section-padding;
+    position: relative;
+    height: 600px;
+    background-image: url(/Template_2/imgs/video.jpg);
+    background-size: cover;
+    .video .overlay {
+        @include overlay;
+    }
+    .text {
+        background: $transparent-main-color;
+        color: white;
+        text-align: center;
+        padding: 100px;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        h2 {
+            margin-bottom: 40px;
+            font-weight: 600;
+            font-size: 30px;
+            text-transform: uppercase;
+        }
+        p {
+            margin-bottom: 40px;
+            font-size: 17px;
+        }
+        a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            text-transform: capitalize;
+            background: $third-color;
+            padding: 10px 30px;
+            width: fit-content;
+            margin: auto;
+            text-transform: uppercase;
+        }
+    }
+}

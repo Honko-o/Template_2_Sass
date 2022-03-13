@@ -1,0 +1,68 @@
+@use '../util/variables' as *;
+@use "../util/mixins" as *;
+
+.subscribe {
+    @include section-padding;
+    background-image: url(/Template_2/imgs/subscribe.jpg);
+    background-size: cover;
+    position: relative;
+    &::before {
+        content: '';
+        @include overlay;
+    }
+    .container {
+        display: flex;
+        position: relative;
+        @media (max-width: 991px) {
+            flex-direction: column;
+        }
+        > p {
+            color: white;
+            margin-left: 50px;
+            @media (max-width: 991px) {
+                margin-left: 0;
+            }
+        }
+    }
+    form {
+        position: relative;
+        display: flex;
+        width: 500px;
+        max-width: 100%;
+        margin-bottom: 20px;
+        i {
+            color: white;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 20px;
+            font-size: 17px;
+        }
+        input[type="email"] {
+            background: transparent;
+            outline: none;
+            border: 1px solid $main-color;
+            border-right: none;
+            width: calc(100% - 120px);
+            padding: {
+                top: 20px;
+                right: 20px;
+                bottom: 20px;
+                left: 60px;
+            };
+            &::placeholder {
+                color: white;
+                text-transform: uppercase;
+            }
+        }
+        input[type="submit"] {
+            border: 1px solid $main-color;
+            padding: 10px 20px;
+            border-left: none;
+            background: $main-color;
+            color: white;
+            text-transform: uppercase;
+            width: 120px;
+        }
+    }
+}

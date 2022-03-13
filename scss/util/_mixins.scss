@@ -1,0 +1,17 @@
+@use './variables' as *;
+
+/// Mixin To Create Overlay
+/// Using Position
+@mixin overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(31 32 33 / 40%);
+}
+
+@mixin section-padding {
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
+}

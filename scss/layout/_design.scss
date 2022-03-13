@@ -1,0 +1,65 @@
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+%position-flex-1 {
+    position: relative;
+    flex: 1;
+}
+
+.design {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
+    min-height: 529px;
+    background-image: url(/Template_2/imgs/design-overlay.jpg);
+    background-size: cover;
+    overflow: hidden;
+    .overlay {
+        @include overlay;
+    }
+    .text {
+        background-color: $transparent-main-color;
+        padding: 30px;
+        @extend %position-flex-1;
+        @media (max-width: 768px) {
+              padding: 10px 30px;
+          }
+        h2 {
+            color: white;
+            margin-bottom: 40px;
+            font-weight: normal;
+        }
+        p {
+            color: white;
+        }
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            color: white;
+            &::before {
+                content: '\f390';
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                margin-right: 40px;
+                font-size: 2em;
+            }
+        }
+    }
+    .image {
+        text-align: center;
+        @extend %position-flex-1;
+        @media (max-width: 768px) {
+            display: none;
+        }
+        img {
+            position: relative;
+            bottom: -160px;
+            
+        }
+    }
+}

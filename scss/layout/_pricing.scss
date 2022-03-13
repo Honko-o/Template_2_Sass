@@ -1,0 +1,90 @@
+@use '../util/variables' as *;
+@use "../util/mixins" as *;
+
+.pricing {
+    @include section-padding;
+    .plans {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    .head {
+        border-top: 1px solid $main-color;
+        border-bottom: 1px solid $main-color;
+        text-align: center;
+        padding: 20px 0;
+        h3 {
+            margin-bottom: 20px;
+        }
+        span {
+            position: relative;
+            display: block;
+            font-size: 60px;
+            color: $third-color;
+            font-weight: 600;
+            &::before {
+                content: '$';
+                font-size: 20px;
+                position: relative;
+                top: -40px;
+                right: 6px;
+            }
+            &::after {
+                content: '/MO';
+                font-size: 20px;
+                position: relative;
+                right: -10px;
+            }
+        }
+    }
+    ul {
+        text-align: center;
+        border-bottom: 1px solid $main-color;
+        li {
+            padding: 20px 0;
+            position: relative;
+            &::not(:last-child) {
+                margin-right: auto;
+                margin-left: auto;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    height: 1px;
+                    width: 120px;
+                    background-color: $main-color;
+                    left: 50%;
+                    top: 55px;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+    .footer {
+        a {
+            display: block;
+            text-decoration: none;
+            color: $third-color;
+            width: fit-content;
+            background-color: $main-color;
+            margin: 40px auto 20px;
+            padding: 10px 20px;
+            color: white;
+        }
+    }
+    .request {
+        text-align: center;
+        margin: 30px 0 0;
+        p {
+            margin-bottom: 30px
+        }
+        a {
+            display: block;
+            width: fit-content;
+            background: $main-color;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            margin: auto;
+        }
+    }
+}

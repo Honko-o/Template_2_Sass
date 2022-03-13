@@ -1,0 +1,15 @@
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+.about {
+    padding-top: $section-padding;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    img {
+        position: relative;
+        max-width: 100%;
+        bottom: -130px;
+        margin-top: -130px;
+    }
+}

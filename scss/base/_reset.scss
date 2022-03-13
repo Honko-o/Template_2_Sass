@@ -1,0 +1,40 @@
+// Start Global Rules
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+ul {
+    list-style: none;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+/* Medium */
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+/* Large */
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+    }
+  }
+// End Global Rules
